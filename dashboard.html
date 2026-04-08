@@ -95,7 +95,10 @@
 </head>
 <body class="bg-background font-body text-on-surface antialiased">
 <header class="fixed top-0 w-full z-50 bg-[#F1EFE8] dark:bg-[#0A0A12] border-b border-[#C8C5D1]/15 flex justify-between items-center px-8 py-4 max-w-full mx-auto">
-<div class="text-xl font-medium tracking-tighter text-[#110847] dark:text-white">MarTech Index</div>
+<div class="text-xl font-medium tracking-tighter text-[#110847] dark:text-white flex items-center gap-3">
+<span class="font-bold"><a href="index.html"><span class="font-bold">MarTech Index</a></span></span>
+<span class="text-[10px] font-mono px-1 border border-primary/20 rounded-sm opacity-60">V3.0.2</span>
+</div>
 <nav class="hidden md:flex items-center gap-8 font-['Inter'] font-medium sentence-case tracking-tight">
 <a class="text-[#110847] dark:text-[#86F8C9] border-b border-[#110847] dark:border-[#86F8C9] pb-1" href="Index.html">Research</a>
 <a class="text-slate-600 dark:text-slate-400 hover:text-[#110847] dark:hover:text-white transition-colors" href="terminal.html">Terminal</a>
@@ -112,7 +115,7 @@
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
 <span class="text-mono text-xs uppercase tracking-widest text-outline mb-2 block">Archive ID: 302-Neural</span>
-<h1 class="text-5xl font-medium tracking-tight text-primary leading-tight">Contributor Dashboard</h1>
+<h1 class="text-5xl font-medium tracking-tight text-primary leading-tight">Live Index Overview</h1>
 </div>
 <div class="flex items-center gap-6 pb-2">
 <div class="flex flex-col items-end">
@@ -167,13 +170,13 @@
 <span class="bg-error-container text-error text-[10px] font-bold px-2 py-1 uppercase text-mono">Anomaly Detected</span>
 <span class="text-mono text-xs text-outline">14:22:05 UTC</span>
 </div>
-<h3 class="text-lg font-medium text-primary mb-2">High-Variance Pattern in Region 04</h3>
+<h3 class="text-lg font-medium text-primary mb-2">High-Variance Pattern in APAC Region </h3>
 <p class="text-on-surface-variant text-sm leading-relaxed mb-6 max-w-2xl">
                                 Radical transparency log: Data ingestion from Node 88201 has deviated from baseline neural projections by 18.4%. System suggests immediate manual audit of source integrity.
                             </p>
 <div class="flex gap-4">
-<button class="bg-primary text-on-primary px-4 py-2 text-xs font-bold uppercase tracking-widest">Initiate Audit</button>
-<button class="text-primary text-xs font-bold uppercase tracking-widest underline decoration-1 underline-offset-4">Dismiss Warning</button>
+<button onclick="window.location.href='register.html'" class="bg-primary text-on-primary px-4 py-2 text-xs font-bold uppercase tracking-widest">Initiate Audit</button>
+<button onclick="window.location.href='register.html'" class="text-primary text-xs font-bold uppercase tracking-widest underline decoration-1 underline-offset-4">Dismiss Warning</button>
 </div>
 </div>
 <div class="bg-surface-container p-8 border-l-4 border-outline-variant bg-white">
@@ -281,7 +284,7 @@
 <span>Cap: 10.0 TB</span>
 </div>
 </div>
-<button class="w-full border border-primary text-primary py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+<button onclick="window.location.href='register.html'" class="w-full border border-primary text-primary py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
                             View Credentials
                         </button>
 </div>
