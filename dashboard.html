@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Courier+New&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#140067",
+                    "tertiary": "#001a10",
+                    "primary-fixed": "#e3dfff",
+                    "surface-variant": "#e4e2dc",
+                    "primary": "#110847",
+                    "outline": "#787681",
+                    "outline-variant": "#c8c5d1",
+                    "secondary-fixed": "#e3dfff",
+                    "on-primary-container": "#8e8acb",
+                    "error": "#ba1a1a",
+                    "primary-container": "#26215c",
+                    "inverse-on-surface": "#f3f1ea",
+                    "on-background": "#1b1c18",
+                    "background": "#fbf9f2",
+                    "primary-fixed-dim": "#c5c0ff",
+                    "on-tertiary-fixed-variant": "#00513a",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#5b5795",
+                    "surface-container": "#f0eee7",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#c5c0ff",
+                    "on-surface-variant": "#47464f",
+                    "on-secondary-fixed-variant": "#3f35a3",
+                    "on-primary-fixed": "#17114d",
+                    "on-primary-fixed-variant": "#443f7b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#003121",
+                    "surface-bright": "#fbf9f2",
+                    "on-surface": "#1b1c18",
+                    "on-tertiary-container": "#27a47a",
+                    "inverse-primary": "#c5c0ff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#68dbae",
+                    "surface": "#fbf9f2",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e4e2dc",
+                    "surface-dim": "#dcdad3",
+                    "secondary-container": "#958dff",
+                    "inverse-surface": "#30312c",
+                    "surface-container-high": "#eae8e1",
+                    "tertiary-fixed": "#86f8c9",
+                    "surface-container-low": "#f6f4ec",
+                    "on-secondary-container": "#2b1c8f",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#002115",
+                    "secondary": "#584fbc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "mono": ["Courier New"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pulse-border-error {
+            border-left-width: 4px;
+            border-left-color: #ba1a1a;
+            animation: pulse-border 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-border {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .text-mono { font-family: 'Courier New', monospace; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-[#F1EFE8] dark:bg-[#0A0A12] border-b border-[#C8C5D1]/15 flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-xl font-medium tracking-tighter text-[#110847] dark:text-white">MarTech Index</div>
+<nav class="hidden md:flex items-center gap-8 font-['Inter'] font-medium sentence-case tracking-tight">
+<a class="text-[#110847] dark:text-[#86F8C9] border-b border-[#110847] dark:border-[#86F8C9] pb-1" href="Index.html">Research</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#110847] dark:hover:text-white transition-colors" href="terminal.html">Terminal</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#110847] dark:hover:text-white transition-colors" href="methodology.html">Methodology</a>
+</nav>
+<div class="flex items-center gap-4">
+<button onclick="window.location.href='dashboard.html'" class="bg-[#110847] text-white px-4 py-2 text-sm font-medium hover:opacity-80 transition-opacity active:scale-95">
+                    Access Terminal
+                </button>
+</div>
+</header>
+<main class="pt-24 pb-20 px-8 max-w-[1440px] mx-auto">
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="text-mono text-xs uppercase tracking-widest text-outline mb-2 block">Archive ID: 302-Neural</span>
+<h1 class="text-5xl font-medium tracking-tight text-primary leading-tight">Contributor Dashboard</h1>
+</div>
+<div class="flex items-center gap-6 pb-2">
+<div class="flex flex-col items-end">
+<span class="text-mono text-[10px] text-outline uppercase tracking-tighter">System Health</span>
+<span class="text-mono text-tertiary-fixed-dim font-bold">99.98%</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<div class="flex flex-col items-end">
+<span class="text-mono text-[10px] text-outline uppercase tracking-tighter">Data Sovereignty</span>
+<span class="text-mono text-primary font-bold">Active</span>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+<div class="bg-surface-container-lowest p-10 border-t-2 border-tertiary-fixed flex flex-col justify-between min-h-[220px]">
+<span class="text-mono text-xs uppercase text-outline tracking-widest">Network Growth</span>
+<div>
+<div class="text-4xl font-medium text-primary mb-1 text-mono">+2,149</div>
+<p class="text-sm text-outline tracking-tight">Nodes added in last 24h</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 border-t-2 border-[#FF7E67] flex flex-col justify-between min-h-[220px]">
+<span class="text-mono text-xs uppercase text-outline tracking-widest">Active Indices</span>
+<div>
+<div class="text-4xl font-medium text-primary mb-1 text-mono">14,208</div>
+<p class="text-sm text-outline tracking-tight">Verified intelligence streams</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 border-t-2 border-[#FFC107] flex flex-col justify-between min-h-[220px]">
+<span class="text-mono text-xs uppercase text-outline tracking-widest">Neural Stability</span>
+<div>
+<div class="text-4xl font-medium text-primary mb-1 text-mono">0.942</div>
+<p class="text-sm text-outline tracking-tight">Weighted confidence score</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-10 border-t-2 border-primary flex flex-col justify-between min-h-[220px]">
+<span class="text-mono text-xs uppercase text-outline tracking-widest">Archival Credits</span>
+<div>
+<div class="text-4xl font-medium text-primary mb-1 text-mono">8,550.00</div>
+<p class="text-sm text-outline tracking-tight">Pending settlement: 120.50</p>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2 space-y-12">
+<div>
+<h2 class="text-2xl font-medium text-primary mb-8 tracking-tight">Intelligence Feed</h2>
+<div class="space-y-4">
+<div class="bg-surface-container p-8 pulse-border-error bg-white">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-error-container text-error text-[10px] font-bold px-2 py-1 uppercase text-mono">Anomaly Detected</span>
+<span class="text-mono text-xs text-outline">14:22:05 UTC</span>
+</div>
+<h3 class="text-lg font-medium text-primary mb-2">High-Variance Pattern in Region 04</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 max-w-2xl">
+                                Radical transparency log: Data ingestion from Node 88201 has deviated from baseline neural projections by 18.4%. System suggests immediate manual audit of source integrity.
+                            </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-4 py-2 text-xs font-bold uppercase tracking-widest">Initiate Audit</button>
+<button class="text-primary text-xs font-bold uppercase tracking-widest underline decoration-1 underline-offset-4">Dismiss Warning</button>
+</div>
+</div>
+<div class="bg-surface-container p-8 border-l-4 border-outline-variant bg-white">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold px-2 py-1 uppercase text-mono">Routine Sync</span>
+<span class="text-mono text-xs text-outline">12:00:00 UTC</span>
+</div>
+<h3 class="text-lg font-medium text-primary mb-2">Global MarTech Index Update</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">
+                                Consensus reached across 4,200 data points. Archive finalized for current epoch. Euler Index recalibrated to 0.99283-Neural.
+                            </p>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-medium text-primary mb-8 tracking-tight">Mathematical Distribution</h2>
+<div class="bg-[#0A0A12] p-10 rounded-lg relative overflow-hidden min-h-[400px]">
+<div class="absolute top-8 right-8 opacity-20">
+<span class="material-symbols-outlined text-[#86F8C9] text-9xl" style="font-variation-settings: 'wght' 100;">hub</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-10">
+<div class="w-2 h-2 bg-tertiary-fixed"></div>
+<span class="text-mono text-xs text-tertiary-fixed tracking-widest uppercase">Real-time Terminal Output</span>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="border border-[#26215C] p-6">
+<span class="text-mono text-[10px] text-on-primary-container uppercase block mb-2">Velocity</span>
+<span class="text-mono text-2xl text-white">42.88 Mb/s</span>
+</div>
+<div class="border border-[#26215C] p-6">
+<span class="text-mono text-[10px] text-on-primary-container uppercase block mb-2">Accuracy</span>
+<span class="text-mono text-2xl text-white">0.99981</span>
+</div>
+</div>
+<div class="border border-[#26215C] p-6 h-32 flex items-end gap-2">
+<div class="bg-tertiary-fixed w-full h-[20%]"></div>
+<div class="bg-tertiary-fixed w-full h-[45%]"></div>
+<div class="bg-tertiary-fixed w-full h-[30%]"></div>
+<div class="bg-tertiary-fixed w-full h-[60%]"></div>
+<div class="bg-tertiary-fixed w-full h-[90%]"></div>
+<div class="bg-tertiary-fixed w-full h-[75%]"></div>
+<div class="bg-tertiary-fixed w-full h-[40%]"></div>
+<div class="bg-tertiary-fixed w-full h-[55%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="space-y-12">
+<div>
+<h2 class="text-2xl font-medium text-primary mb-8 tracking-tight">Active Nodes</h2>
+<div class="bg-surface-container-low p-8 space-y-6">
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center text-tertiary-fixed text-mono text-xs">A1</div>
+<div>
+<div class="text-sm font-medium text-primary">North Atlantic</div>
+<div class="text-mono text-[10px] text-outline">Active / 12.4ms</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center text-tertiary-fixed text-mono text-xs">P4</div>
+<div>
+<div class="text-sm font-medium text-primary">Pacific Central</div>
+<div class="text-mono text-[10px] text-outline">Syncing / 48.1ms</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-sm">sync</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center text-tertiary-fixed text-mono text-xs">E9</div>
+<div>
+<div class="text-sm font-medium text-primary">EU Archive</div>
+<div class="text-mono text-[10px] text-outline">Active / 8.9ms</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm">check_circle</span>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-medium text-primary mb-8 tracking-tight">Contributor Meta</h2>
+<div class="bg-white p-8 border border-outline-variant/15 space-y-8">
+<div>
+<span class="text-mono text-[10px] text-outline uppercase tracking-widest block mb-4">Assigned Tier</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-medium text-primary">Diamond</span>
+<span class="text-mono text-xs text-tertiary-fixed-dim bg-tertiary-container px-2 py-0.5">Top 1%</span>
+</div>
+</div>
+<div class="space-y-4">
+<span class="text-mono text-[10px] text-outline uppercase tracking-widest block">Resource Allocation</span>
+<div class="w-full bg-surface-container-high h-1">
+<div class="bg-primary w-2/3 h-full"></div>
+</div>
+<div class="flex justify-between text-mono text-[10px] text-outline">
+<span>Used: 66%</span>
+<span>Cap: 10.0 TB</span>
+</div>
+</div>
+<button class="w-full border border-primary text-primary py-3 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+                            View Credentials
+                        </button>
+</div>
+</div>
+</aside>
+</section>
+</main>
+<footer class="bg-[#F0EEE7] dark:bg-[#0A0A12] border-t border-[#C8C5D1]/15 flex flex-col md:flex-row justify-between items-center px-8 py-6 w-full gap-4">
+<div class="text-sm font-bold font-['Courier_New'] text-[#110847] dark:text-[#86F8C9]">© 2024 Institutional Intelligence Framework. Organism Version 3.0.2-Neural.</div>
+<div class="flex gap-6 font-['Courier_New'] text-xs uppercase tracking-widest">
+<a class="opacity-70 hover:opacity-100 hover:text-[#26215C] dark:hover:text-[#86F8C9] transition-opacity underline decoration-1" href="register.html">Infrastructure Status</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#26215C] dark:hover:text-[#86F8C9] transition-opacity" href="register.html">Data Sovereignty</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#26215C] dark:hover:text-[#86F8C9] transition-opacity" href="register.html">Encryption Protocol</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#26215C] dark:hover:text-[#86F8C9] transition-opacity" href="register.html">System Audit</a>
+</div>
+</footer>
+</body></html>

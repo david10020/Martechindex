@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Courier+Prime&amp;family=Space+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fbf9f2",
+                        "primary-fixed-dim": "#c5c0ff",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#5b5795",
+                        "secondary-fixed-dim": "#c5c0ff",
+                        "on-surface-variant": "#47464f",
+                        "on-secondary-fixed-variant": "#3f35a3",
+                        "on-primary-fixed": "#17114d",
+                        "surface-container": "#f0eee7",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#443f7b",
+                        "on-secondary-fixed": "#140067",
+                        "tertiary": "#001a10",
+                        "primary-fixed": "#e3dfff",
+                        "surface-variant": "#e4e2dc",
+                        "primary": "#110847",
+                        "outline": "#787681",
+                        "outline-variant": "#c8c5d1",
+                        "secondary-fixed": "#e3dfff",
+                        "on-primary-container": "#8e8acb",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f1ea",
+                        "primary-container": "#26215c",
+                        "on-background": "#1b1c18",
+                        "surface-dim": "#dcdad3",
+                        "secondary-container": "#958dff",
+                        "inverse-surface": "#30312c",
+                        "surface-container-high": "#eae8e1",
+                        "tertiary-fixed": "#86f8c9",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f6f4ec",
+                        "on-secondary-container": "#2b1c8f",
+                        "on-tertiary-fixed": "#002115",
+                        "secondary": "#584fbc",
+                        "surface-bright": "#fbf9f2",
+                        "on-surface": "#1b1c18",
+                        "tertiary-container": "#003121",
+                        "on-tertiary-container": "#27a47a",
+                        "inverse-primary": "#c5c0ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#68dbae",
+                        "surface": "#fbf9f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e4e2dc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "mono": ["Courier Prime", "monospace"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mono-text { font-family: 'Courier Prime', monospace; }
+        .label-text { font-family: 'Space Grotesk', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-background font-body min-h-screen flex flex-col">
+<!-- TopNavBar (Hidden for focused journey but kept as per logic instruction if we consider it top-level, here suppressed for transaction flow) -->
+<header class="bg-[#FBF9F2] dark:bg-[#0A0A12] border-b border-[#C8C5D1]/15 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-xl font-medium tracking-tighter text-[#110847] dark:text-white font-['Inter']">MarTech Index</div>
+<div class="mono-text text-[10px] text-outline">SECURE_REGISTRATION_GATEWAY_V1.02</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center py-20 px-6">
+<!-- Euler Index Watermark (Abstract graphic) -->
+<div class="fixed top-20 right-20 w-64 h-64 opacity-5 pointer-events-none">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M100,100 C100,40 160,40 160,100 C160,160 100,160 100,100 C100,40 40,40 40,100 C40,160 100,160 100,100" fill="none" stroke="#110847" stroke-width="0.5"></path>
+<circle cx="100" cy="100" fill="#110847" r="1"></circle>
+</svg>
+</div>
+<div class="w-full max-w-[580px] bg-white p-16">
+<!-- Progress Tracker -->
+<div class="mb-12 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="label-text text-outline mb-1">Step 01 / 03</span>
+<h1 class="text-3xl font-medium tracking-tight text-primary">Activate Your Access</h1>
+</div>
+<div class="mono-text text-lg text-primary">
+                    [<span class="text-tertiary-container">■</span> □ □]
+                </div>
+</div>
+<!-- Form Content -->
+<form class="space-y-10">
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-1">
+<label class="label-text text-outline">First Name</label>
+<input class="w-full border-b border-outline-variant/20 focus:border-primary outline-none py-2 px-0 bg-transparent mono-text text-sm uppercase placeholder:text-outline-variant" placeholder="ALEXANDER" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="label-text text-outline">Last Name</label>
+<input class="w-full border-b border-outline-variant/20 focus:border-primary outline-none py-2 px-0 bg-transparent mono-text text-sm uppercase placeholder:text-outline-variant" placeholder="HAMILTON" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="label-text text-outline">Institutional Email</label>
+<input class="w-full border-b border-outline-variant/20 focus:border-primary outline-none py-2 px-0 bg-transparent mono-text text-sm uppercase placeholder:text-outline-variant" placeholder="RESEARCH@INSTITUTION.ORG" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="label-text text-outline">Network Clearance Level</label>
+<div class="flex gap-4 pt-2">
+<label class="flex items-center cursor-pointer group">
+<input checked="" class="hidden peer" name="level" type="radio"/>
+<div class="w-4 h-4 border border-outline flex items-center justify-center peer-checked:bg-primary mr-2 transition-colors">
+<div class="w-1.5 h-1.5 bg-white scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="mono-text text-[11px] text-outline group-hover:text-primary">L1_RESEARCH</span>
+</label>
+<label class="flex items-center cursor-pointer group">
+<input class="hidden peer" name="level" type="radio"/>
+<div class="w-4 h-4 border border-outline flex items-center justify-center peer-checked:bg-primary mr-2 transition-colors">
+<div class="w-1.5 h-1.5 bg-white scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="mono-text text-[11px] text-outline group-hover:text-primary">L2_TERMINAL</span>
+</label>
+<label class="flex items-center cursor-pointer group">
+<input class="hidden peer" name="level" type="radio"/>
+<div class="w-4 h-4 border border-outline flex items-center justify-center peer-checked:bg-primary mr-2 transition-colors">
+<div class="w-1.5 h-1.5 bg-white scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="mono-text text-[11px] text-outline group-hover:text-primary">L3_ADMIN</span>
+</label>
+</div>
+</div>
+<div class="space-y-1">
+<label class="label-text text-outline">Access Code (Referal only)</label>
+<input class="w-full border-b border-outline-variant/20 focus:border-primary outline-none py-2 px-0 bg-transparent mono-text text-sm tracking-[0.2em] text-primary" type="text" value="882-990-112-X"/>
+</div>
+<div class="pt-8 flex items-center justify-between">
+<div class="flex items-center text-outline mono-text text-[10px]">
+<span class="material-symbols-outlined text-[14px] mr-2" style="font-variation-settings: 'FILL' 1;">lock</span>
+                        ENCRYPTED_SESSION_ACTIVE
+                    </div>
+<button class="bg-primary text-on-primary px-10 py-3 rounded-none flex items-center group" type="button" onclick="document.getElementById('ref-err').style.display='block'">
+    <span class="label-text text-white">Next Phase</span>
+    <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p id="ref-err" style="display:none;color:red;font-size:0.875rem;margin-top:0.5rem;">Incorrect referral code</p>
+</div>
+</form>
+</div>
+<!-- Sidebar Inset / Context -->
+<div class="mt-12 text-center max-w-sm">
+<p class="mono-text text-[11px] text-outline uppercase leading-relaxed">
+                Entry into the index requires institutional verification. All data processed via the Intelligence Framework is subject to 256-bit encryption standards.
+            </p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F0EEE7] dark:bg-[#0A0A12] border-t border-[#C8C5D1]/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div>
+<div class="font-['Inter'] font-medium text-lg uppercase tracking-widest text-[#110847] dark:text-white mb-6">MarTech Index</div>
+<p class="font-['Courier_New'] text-sm tracking-tight text-[#110847]/70 dark:text-white/50 leading-relaxed">
+                    The definitive benchmark for institutional marketing technology intelligence.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Courier_New'] text-sm font-bold text-[#110847] dark:text-[#86F8C9] uppercase">Research Units</h4>
+<ul class="font-['Courier_New'] text-sm tracking-tight text-[#110847]/70 dark:text-white/50 space-y-2">
+<li class="hover:opacity-80 transition-opacity cursor-pointer">Index Methodology</li>
+<li class="hover:opacity-80 transition-opacity cursor-pointer">Terminal Access</li>
+<li class="hover:opacity-80 transition-opacity cursor-pointer">Infrastructure</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Courier_New'] text-sm font-bold text-[#110847] dark:text-[#86F8C9] uppercase">Compliance</h4>
+<ul class="font-['Courier_New'] text-sm tracking-tight text-[#110847]/70 dark:text-white/50 space-y-2">
+<li class="hover:opacity-80 transition-opacity cursor-pointer underline">Privacy Policy</li>
+<li class="hover:opacity-80 transition-opacity cursor-pointer">System Status</li>
+<li class="hover:opacity-80 transition-opacity cursor-pointer">Data Governance</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-['Courier_New'] text-sm font-bold text-[#110847] dark:text-[#86F8C9] uppercase">Network Status</h4>
+<div class="flex items-center">
+<div class="w-2 h-2 rounded-full bg-tertiary-container mr-2"></div>
+<span class="font-['Courier_New'] text-[12px] text-[#110847]/70 dark:text-white/50">NODE_01_ACTIVE</span>
+</div>
+<p class="font-['Courier_New'] text-[11px] text-[#110847]/50 mt-4 uppercase">
+                    © 2024 Institutional Intelligence Framework. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

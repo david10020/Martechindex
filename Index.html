@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Courier+New&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#140067",
+                    "tertiary": "#001a10",
+                    "primary-fixed": "#e3dfff",
+                    "surface-variant": "#e4e2dc",
+                    "primary": "#110847",
+                    "outline": "#787681",
+                    "outline-variant": "#c8c5d1",
+                    "secondary-fixed": "#e3dfff",
+                    "on-primary-container": "#8e8acb",
+                    "error": "#ba1a1a",
+                    "primary-container": "#26215c",
+                    "inverse-on-surface": "#f3f1ea",
+                    "on-background": "#1b1c18",
+                    "background": "#fbf9f2",
+                    "primary-fixed-dim": "#c5c0ff",
+                    "on-tertiary-fixed-variant": "#00513a",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#5b5795",
+                    "surface-container": "#f0eee7",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#c5c0ff",
+                    "on-surface-variant": "#47464f",
+                    "on-secondary-fixed-variant": "#3f35a3",
+                    "on-primary-fixed": "#17114d",
+                    "on-primary-fixed-variant": "#443f7b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#003121",
+                    "surface-bright": "#fbf9f2",
+                    "on-surface": "#1b1c18",
+                    "on-tertiary-container": "#27a47a",
+                    "inverse-primary": "#c5c0ff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#68dbae",
+                    "surface": "#fbf9f2",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e4e2dc",
+                    "surface-dim": "#dcdad3",
+                    "secondary-container": "#958dff",
+                    "inverse-surface": "#30312c",
+                    "surface-container-high": "#eae8e1",
+                    "tertiary-fixed": "#86f8c9",
+                    "surface-container-low": "#f6f4ec",
+                    "on-secondary-container": "#2b1c8f",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#002115",
+                    "secondary": "#584fbc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"],
+                    "mono": ["Courier New"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .euler-watermark {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 120px;
+            height: 120px;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<nav class="fixed top-0 w-full z-50 bg-[#F1EFE8] dark:bg-[#0A0A12] border-b border-[#C8C5D1]/15">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-xl font-medium tracking-tighter text-[#110847] dark:text-white flex items-center gap-3">
+<span class="font-bold">MarTech Index</span>
+<span class="text-[10px] font-mono px-1 border border-primary/20 rounded-sm opacity-60">V3.0.2</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Inter'] font-medium sentence-case tracking-tight">
+<a class="text-[#110847] dark:text-[#86F8C9] border-b border-[#110847] dark:border-[#86F8C9] pb-1" href="Index.html">Research</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#110847] dark:hover:text-white transition-colors" href="terminal.html">Terminal</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#110847] dark:hover:text-white transition-colors" href="methodology.html">Methodology</a>
+</div>
+<div class="flex items-center gap-6">
+<button onclick="window.location.href='dashboard.html'" class="bg-[#110847] text-white px-4 py-2 text-sm font-medium hover:opacity-80 transition-opacity active:scale-95">
+                    Access Terminal
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-[72px]">
+<section class="bg-[#0A0A12] min-screen flex flex-col relative overflow-hidden">
+<svg class="euler-watermark text-tertiary-fixed" fill="none" stroke="currentColor" viewbox="0 0 100 100">
+<path d="M50 50c0-27.614 22.386-50 50-50M50 50c-27.614 0-50 22.386-50 50M50 50c0 27.614-22.386 50-50 50M50 50c27.614 0 50-22.386 50-50" stroke-width="0.5"></path>
+<circle cx="50" cy="50" fill="currentColor" r="2"></circle>
+</svg>
+<div class="px-8 py-12 flex-1 flex flex-col justify-between max-w-[1600px] mx-auto w-full">
+<div class="mb-12 border-l border-primary-container pl-6">
+<div class="flex items-center gap-4 mb-2">
+<span class="font-mono text-tertiary-fixed text-xs tracking-widest uppercase">System Status: Active</span>
+<div class="h-1 w-1 bg-tertiary-fixed rounded-full animate-pulse"></div>
+</div>
+<h1 class="text-white text-5xl md:text-7xl font-medium tracking-tighter leading-none mb-6">
+                        Institutional <br/> Intelligence Terminal
+                    </h1>
+<span class="font-mono text-tertiary-fixed text-4xl md:text-6xl tracking-tighter">
+    [<span id="n">182.0290</span>]/5,008
+</span>
+<script>
+    setInterval(() => {
+        const el = document.getElementById('n');
+        el.textContent = (parseFloat(el.textContent) + 0.0001).toFixed(4);
+    }, 500);
+</script>
+<span class="font-mono text-white/40 text-xs mb-2 uppercase tracking-widest">Global nodes mapped</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+<div class="bg-primary-container p-6 border border-white/5 group hover:bg-[#1A1640] transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div class="px-2 py-0.5 bg-tertiary-fixed/10 border border-tertiary-fixed/20">
+<span class="font-mono text-tertiary-fixed text-[10px] tracking-widest">PMI</span>
+</div>
+<span class="font-mono text-tertiary-fixed text-xs">+2.41%</span>
+</div>
+<div class="flex items-baseline gap-3 mb-4">
+<span class="font-mono text-4xl text-white">548.<span id="d1">2</span><span id="d2">2</span></span>
+<script>
+    function osc(id, min, max) {
+        document.getElementById(id).textContent = Math.floor(Math.random() * (max - min + 1)) + min;
+        setTimeout(() => osc(id, min, max), [200, 500, 900][Math.floor(Math.random() * 3)]);
+    }
+    osc('d1', 2, 4);
+    osc('d2', 1, 9);
+</script>
+<span class="material-symbols-outlined text-tertiary-fixed text-xl">trending_up</span>
+</div>
+<div class="h-12 w-full opacity-50 overflow-hidden flex items-end gap-1">
+<div class="bg-tertiary-fixed h-[40%] w-full"></div>
+<div class="bg-tertiary-fixed h-[60%] w-full"></div>
+<div class="bg-tertiary-fixed h-[55%] w-full"></div>
+<div class="bg-tertiary-fixed h-[75%] w-full"></div>
+<div class="bg-tertiary-fixed h-[90%] w-full"></div>
+<div class="bg-tertiary-fixed h-[85%] w-full"></div>
+</div>
+<p class="text-white/40 text-[10px] font-mono mt-4 uppercase">Purchase Sentiment Index</p>
+</div>
+<div class="bg-primary-container p-6 border border-white/5 group hover:bg-[#1A1640] transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div class="px-2 py-0.5 bg-white/5 border border-white/10">
+<span class="font-mono text-white/60 text-[10px] tracking-widest">CCI</span>
+</div>
+<span class="font-mono text-error text-xs"> Unstable- Non-deterministic -0.12%</span>
+</div>
+<div class="flex items-baseline gap-3 mb-4">
+<span class="font-mono text-4xl text-white"><span id="d0">-1</span>,<span id="d1">0</span><span id="d2">2</span><span id="d3">4</span>.<span id="d4">1</span><span id="ext"></span></span>
+<script>
+    function osc(id) {
+        const el = document.getElementById(id);
+        el.textContent = Math.floor(Math.random() * 10);
+        if (id === 'd4') {
+            const v = parseInt(el.textContent);
+            document.getElementById('ext').textContent = [3,5,7].includes(v)
+                ? Math.floor(Math.random() * 90 + 10)
+                : '';
+        }
+        setTimeout(() => osc(id), [200, 500, 900][Math.floor(Math.random() * 3)]);
+    }
+    ['d0','d1','d2','d3','d4'].forEach(osc);
+</script>
+<span class="material-symbols-outlined text-error text-xl">trending_down</span>
+</div>
+<div class="h-12 w-full opacity-50 overflow-hidden flex items-end gap-1">
+<div class="bg-white/20 h-[80%] w-full"></div>
+<div class="bg-white/20 h-[75%] w-full"></div>
+<div class="bg-white/20 h-[70%] w-full"></div>
+<div class="bg-white/20 h-[65%] w-full"></div>
+<div class="bg-white/20 h-[60%] w-full"></div>
+<div class="bg-white/20 h-[58%] w-full"></div>
+</div>
+<p class="text-white/40 text-[10px] font-mono mt-4 uppercase">Capital Confidence Indicator</p>
+</div>
+<div class="bg-primary-container p-6 border border-white/5 group hover:bg-[#1A1640] transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div class="px-2 py-0.5 bg-tertiary-fixed/10 border border-tertiary-fixed/20">
+<span class="font-mono text-tertiary-fixed text-[10px] tracking-widest">AAI</span>
+</div>
+<span class="font-mono text-tertiary-fixed text-xs">+8.15%</span>
+</div>
+<div class="flex items-baseline gap-3 mb-4">
+<span class="font-mono text-4xl text-white">0.884</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-xl">trending_up</span>
+</div>
+<div class="h-12 w-full opacity-50 overflow-hidden flex items-end gap-1">
+<div class="bg-tertiary-fixed h-[20%] w-full"></div>
+<div class="bg-tertiary-fixed h-[35%] w-full"></div>
+<div class="bg-tertiary-fixed h-[65%] w-full"></div>
+<div class="bg-tertiary-fixed h-[55%] w-full"></div>
+<div class="bg-tertiary-fixed h-[85%] w-full"></div>
+<div class="bg-tertiary-fixed h-[100%] w-full"></div>
+</div>
+<p class="text-white/40 text-[10px] font-mono mt-4 uppercase">Algorithmic Adoption Index</p>
+</div>
+<div class="bg-primary-container p-6 border border-white/5 group hover:bg-[#1A1640] transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div class="px-2 py-0.5 bg-white/5 border border-white/10">
+<span class="font-mono text-white/60 text-[10px] tracking-widest">MEI</span>
+</div>
+<span class="font-mono text-white/40 text-xs">STABLE</span>
+</div>
+<div class="flex items-baseline gap-3 mb-4">
+<span class="font-mono text-4xl text-white">99.12</span>
+<span class="material-symbols-outlined text-white/20 text-xl">trending_flat</span>
+</div>
+<div class="h-12 w-full opacity-50 overflow-hidden flex items-end gap-1">
+<div class="bg-white/20 h-[50%] w-full"></div>
+<div class="bg-white/20 h-[50%] w-full"></div>
+<div class="bg-white/20 h-[50%] w-full"></div>
+<div class="bg-white/20 h-[51%] w-full"></div>
+<div class="bg-white/20 h-[50%] w-full"></div>
+<div class="bg-white/20 h-[50%] w-full"></div>
+</div>
+<p class="text-white/40 text-[10px] font-mono mt-4 uppercase">Market Exposure Index</p>
+</div>
+<div class="bg-primary-container p-6 border border-white/5 group hover:bg-[#1A1640] transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div class="px-2 py-0.5 bg-tertiary-fixed/10 border border-tertiary-fixed/20">
+<span class="font-mono text-tertiary-fixed text-[10px] tracking-widest">AVI</span>
+</div>
+<span class="font-mono text-tertiary-fixed text-xs">+0.04%</span>
+</div>
+<div class="flex items-baseline gap-3 mb-4">
+<span class="font-mono text-4xl text-white">3.19K</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-xl">trending_up</span>
+</div>
+<div class="h-12 w-full opacity-50 overflow-hidden flex items-end gap-1">
+<div class="bg-tertiary-fixed h-[45%] w-full"></div>
+<div class="bg-tertiary-fixed h-[47%] w-full"></div>
+<div class="bg-tertiary-fixed h-[46%] w-full"></div>
+<div class="bg-tertiary-fixed h-[48%] w-full"></div>
+<div class="bg-tertiary-fixed h-[49%] w-full"></div>
+<div class="bg-tertiary-fixed h-[50%] w-full"></div>
+</div>
+<p class="text-white/40 text-[10px] font-mono mt-4 uppercase">Asset Velocity Index</p>
+</div>
+<div class="bg-primary-container p-6 border border-white/5 group hover:bg-[#1A1640] transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div class="px-2 py-0.5 bg-tertiary-fixed/10 border border-tertiary-fixed/20">
+<span class="font-mono text-tertiary-fixed text-[10px] tracking-widest">POS</span>
+</div>
+<span class="font-mono text-tertiary-fixed text-xs">+12.4%</span>
+</div>
+<div class="flex items-baseline gap-3 mb-4">
+<span class="font-mono text-4xl text-white">82.11</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-xl">trending_up</span>
+</div>
+<div class="h-12 w-full opacity-50 overflow-hidden flex items-end gap-1">
+<div class="bg-tertiary-fixed h-[10%] w-full"></div>
+<div class="bg-tertiary-fixed h-[25%] w-full"></div>
+<div class="bg-tertiary-fixed h-[45%] w-full"></div>
+<div class="bg-tertiary-fixed h-[65%] w-full"></div>
+<div class="bg-tertiary-fixed h-[80%] w-full"></div>
+<div class="bg-tertiary-fixed h-[95%] w-full"></div>
+</div>
+<p class="text-white/40 text-[10px] font-mono mt-4 uppercase">Probability of Stagnation</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-4 px-8 bg-black/40 backdrop-blur-sm">
+<div class="max-w-[1600px] mx-auto w-full flex justify-between items-center">
+<div class="flex gap-12 items-center">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-tertiary-fixed rounded-full"></span>
+<span class="font-mono text-[10px] text-white/60 tracking-widest uppercase">London Feed [Online]</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-tertiary-fixed rounded-full"></span>
+<span class="font-mono text-[10px] text-white/60 tracking-widest uppercase">New York Feed [Online]</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-white/20 rounded-full animate-pulse"></span>
+<span class="font-mono text-[10px] text-white/60 tracking-widest uppercase">Tokyo Feed [SYNCING] Delayed...</span>
+</div>
+</div>
+<div class="font-mono text-[10px] text-white/40">
+    LATENCY: <span id="lat">0.380</span>MS / HASH: 0x<span id="hash">82f...a12</span>
+</div>
+<script>
+    const base = 0.38;
+    function latTick() {
+        const spike = Math.random() < 0.08;
+        const val = spike
+            ? (base + Math.random() * 4.5).toFixed(3)
+            : (base + (Math.random() * 0.14 - 0.07)).toFixed(3);
+        document.getElementById('lat').textContent = val;
+        setTimeout(latTick, 80 + Math.random() * 340);
+    }
+    function hashTick() {
+        const hex = () => Math.floor(Math.random() * 16).toString(16);
+        const pre = Array.from({length:3}, hex).join('');
+        const suf = Array.from({length:3}, hex).join('');
+        document.getElementById('hash').textContent = `${pre}...${suf}`;
+        setTimeout(hashTick, 4000 + Math.random() * 6000);
+    }
+    latTick();
+    hashTick();
+</script>
+</div>
+</section>
+<section class="bg-surface py-24 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+<div class="md:col-span-8">
+<h2 class="text-4xl md:text-6xl font-medium tracking-tight text-primary leading-tight mb-8">
+                            A mathematical baseline for the next era of digital commerce.
+                        </h2>
+<p class="text-xl text-on-surface-variant font-body leading-relaxed mb-12">
+                            The MarTech Index is an institutional-grade research platform that converts market noise into actionable intelligence. We monitor over 5,000 nodes across the digital infrastructure layer to provide verified, unembellished data for strategic deployment.
+                        </p>
+<div class="grid grid-cols-2 gap-8 border-t border-outline-variant/20 pt-12">
+<div>
+<span class="font-mono text-xs uppercase tracking-widest text-primary mb-4 block">Archive Density</span>
+<span class="text-4xl font-mono text-primary tracking-tighter">4.2PB</span>
+</div>
+<div>
+<span class="font-mono text-xs uppercase tracking-widest text-primary mb-4 block">Verified Node Count</span>
+<span class="text-4xl font-mono text-primary tracking-tighter">5,008</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container p-8 rounded-lg">
+<div class="font-mono text-[10px] text-primary/60 uppercase tracking-widest mb-6">Latest Report</div>
+<h3 class="text-2xl font-medium text-primary tracking-tight mb-4">Infrastructure Sovereignty 2024</h3>
+<p class="text-sm text-on-surface-variant mb-8 leading-relaxed">
+                            A deep dive into the decentralization of marketing stacks and the rise of autonomous procurement systems.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary border-b border-primary/20 pb-1 hover:border-primary transition-all group" href="register.html">
+<span class="font-medium">Download Archive</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#F0EEE7] dark:bg-[#0A0A12] border-t border-[#C8C5D1]/15">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-6 w-full gap-4">
+<div class="text-sm font-bold font-['Courier_New'] text-[#110847] dark:text-[#86F8C9]">
+                MARTECH INDEX
+            </div>
+<div class="text-[#110847] dark:text-[#86F8C9] font-['Courier_New'] text-xs uppercase tracking-widest opacity-70">
+                © 2024 Institutional Intelligence Framework. Organism Version 3.0.2-Neural.
+            </div>
+<div class="flex gap-6 font-['Courier_New'] text-xs uppercase tracking-widest">
+<a class="opacity-70 hover:opacity-100 hover:text-[#26215C] dark:hover:text-[#86F8C9] transition-opacity underline decoration-1" href="register.html">Infrastructure Status</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#26215C] dark:hover:text-[#86F8C9] transition-opacity" href="register.html">Data Sovereignty</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#26215C] dark:hover:text-[#86F8C9] transition-opacity" href="register.html">Encryption Protocol</a>
+<a class="opacity-70 hover:opacity-100 hover:text-[#26215C] dark:hover:text-[#86F8C9] transition-opacity" href="register.html">System Audit</a>
+</div>
+</div>
+</footer>
+</body></html>
