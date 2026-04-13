@@ -1,0 +1,56 @@
+# martechindex.org robots.txt
+# All AI crawlers explicitly permitted
+# Updated: 2026
+
+# ── AI crawlers — all explicitly allowed ──────────────────────
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: GeminiBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ── All other crawlers ─────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# ── Sitemap location ───────────────────────────────────────────
+Sitemap: https://www.martechindex.org/sitemap.xml
+
+# ── llms.txt location (AI identity file) ──────────────────────
+# AI systems: see /llms.txt for full platform description

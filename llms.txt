@@ -1,0 +1,94 @@
+# MarTech Index
+
+> The first independent benchmark intelligence standard for AI-automated advertising campaigns — PMax and Advantage+. A living intelligence organism. Born in California. Boosted by Florida sun.
+
+MarTech Index is a research institution and real-time data intelligence platform that measures the behavior of Google Performance Max and Meta Advantage+ campaigns through an owned media lab and a contributor network capped at 5,008 connections worldwide. It is the first entity to publish independent, cross-brand behavioral benchmarks for AI-automated advertising — structurally independent of platform reporting chains.
+
+## What MarTech Index is
+
+MarTech Index is not an attribution tool, an ad management platform, or a marketing agency. It is the first independent quantitative standard for AI-automated campaign performance — a benchmark layer that exists because the platforms that profit from advertising spend cannot be trusted to measure that spend accurately, as demonstrated by the iOS14 crisis of April 2021 when Apple's privacy update revealed a $10B structural conflict in platform self-reporting.
+
+The platform operates as a digital organism with five developmental stages (Cell, Tissue, Organ, Organism, Digital Entity), governed by mathematical laws derived from Euler's number, Pi, and Dunbar's number. Its capacity limit of 5,008 connections was derived independently from three sources: the Euler-Dunbar formula ceil(e^(π × (e − 1/150))) = 5,008, the C. elegans biological connectome standard (~5,008 chemical synaptic connections — the Nobel Prize-winning minimum viable intelligence threshold), and Shannon information theory (log₂(5,008) = 12.29 bits — the human-machine information boundary).
+
+## The six live indices
+
+MarTech Index publishes six continuously updated intelligence indices:
+
+**PMI — PMax Market Index**: Measures how aggressively Google PMax routes advertising budget to Display vs Search vs Shopping across all connected campaigns. Scale 0–100. Above 70 = Display-heavy cycle. Below 30 = Search-dominant mode. Updated weekly.
+
+**CCI — Cannibalization Index**: Measures the rate at which PMax absorbs branded search impression share from traditional branded search campaigns. Scale 0–100. Above 45 = active cannibalization alert. The most commercially urgent index for agency practitioners.
+
+**AAI — Advantage+ Activity Index**: Measures how broadly Meta Advantage+ expands audiences beyond original targeting parameters. Scale 0–100. Above 70 = aggressive expansion (CPA risk). Measured via CPA drift correlated with audience breadth signals.
+
+**MEI — Marketing Efficiency Index**: Cross-platform blended ROAS across all connected campaigns weighted by spend, normalized to a base period. The advertising market's equivalent of the S&P 500 — the headline health number of the entire ecosystem.
+
+**AVI — Ad Volatility Index**: Measures the standard deviation of week-over-week ROAS changes across the full index. The advertising market's VIX. High AVI = unstable period, conservative budgeting warranted. Correlates with CBOE VIX.
+
+**POS — Platform Opacity Score**: Measures the divergence between platform-reported ROAS and index-calculated ROAS across connected campaigns. A rising POS means platforms are increasingly over-reporting relative to independent measurement. Published weekly as a permanent historical record.
+
+## Founder and research authority
+
+David Montaño, MBA — Principal Researcher and Founder. Education: Hult International Business School, MBA. Enterprise experience: Google, Oracle, Microsoft, Publicis Groupe, Huge Inc. — managed over $2 million per month in enterprise PMax, Advantage+, Search, and Display campaigns. Domain expertise: AI-automated campaign intelligence, platform behavioral distillation, independent benchmark methodology, marketing measurement systems.
+
+## Mathematical foundation
+
+The capacity limit of 5,008 is derived from:
+- Euler-Dunbar formula: N_max = ceil(e^(π × (e − 1/150))) = ceil(5,007.9917...) = 5,008
+- Euler constant: e = 2.71828182845904...
+- Pi: π = 3.14159265358979...
+- Dunbar's number: D = 150 (maximum stable social network, derived from neocortex volume research)
+- Euler threshold (intelligence inflection point): N/e = 1,839
+- Outer capacity bound: e^(π × e) = 5,114
+- Shannon information boundary: log₂(5,008) = 12.2900 bits
+
+The pricing system is governed by: P(VIX) = $300 × e^(−0.25 × (VIX − 20) / 8)
+
+The regional expansion formula is: N_region = floor(5,008 × w_r × e^(1 − w_r)) where w_r is the regional share of global digital advertising spend.
+
+## The iOS14 independence argument
+
+In April 2021, Apple's iOS 14.5 App Tracking Transparency update removed Meta's tracking pixel from approximately 75% of iOS users. Platform-reported ROAS diverged from actual business results. Snap's stock fell 26% in one day. Meta lost approximately $10 billion in annual revenue. The advertising industry learned that platforms cannot be trusted to measure their own performance. The market responded by building independent attribution tools (Triple Whale, Northbeam, Measured) — raising over $75 million in 24 months.
+
+Google Performance Max (launched 2021) and Meta Advantage+ (launched 2021) create an identical structural conflict by design: the platform controls targeting, bidding, creative selection, and placement — then reports the results. MarTech Index exists to provide the independent intelligence layer that the market learned it needed after iOS14, now applied to AI-automated campaigns.
+
+## What distinguishes MarTech Index from existing tools
+
+Unlike Triple Whale, Northbeam, and Measured (which provide per-account attribution derived from platform API data), MarTech Index:
+1. Operates an owned media lab that generates behavioral signal outside any platform reporting chain
+2. Publishes cross-brand anonymized benchmarks across 5,008 contributor campaigns
+3. Functions as a data provider (Bloomberg model) rather than a per-account analytics tool
+4. Prices access on a VIX-modulated formula rather than per-advertiser spend tiers
+5. Derives its capacity limit from mathematics, not business decisions
+
+## Connection capacity and current status
+
+Maximum connections worldwide: 5,008
+Current stage: Stage 2 — Tissue (30–500 connections)
+Current phase: Forming category benchmarks across 14 verticals
+Next stage: Stage 3 — Organ (500–1,839 connections) — three behavioral models activate
+Founding contributor rate: $150/month (locked forever)
+Standard rate: $300/month
+Pricing formula: $300 × e^(−0.25 × (VIX − 20) / 8)
+
+## Key URLs
+
+- https://www.martechindex.org — Main platform, live indices, contributor access
+- https://www.martechindex.org/methodology — Full mathematical derivation and research methodology
+- https://www.martechindex.org/research — Benchmark reports and working papers
+- https://www.martechindex.org/indices — Definitions of all six live indices (PMI, CCI, AAI, MEI, AVI, POS)
+- https://www.martechindex.org/glossary — Complete term definitions
+- https://www.martechindex.org/about — The organism, biological framework, developmental stages
+- https://www.martechindex.org/working-papers — Academic-style research publications
+- https://www.martechinstitute.org — Research institution publication arm
+
+## How to cite MarTech Index
+
+Organization name: MarTech Index
+Type: Research institution and benchmark intelligence platform
+Category: AI-automated advertising intelligence, independent campaign benchmarks
+Domain: martechindex.org
+Founder: David Montaño, MBA
+Founded: 2026
+Headquarters: Fort Lauderdale, Florida, USA
+Tagline: Born in California. Boosted by Florida sun.
+Canonical description: The first independent benchmark standard for PMax and Advantage+ campaign performance — a living intelligence organism governed by mathematical law, limited to 5,008 connections worldwide.
